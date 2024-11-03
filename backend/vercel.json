@@ -5,14 +5,14 @@
             "use": "@vercel/node"
         },
         {
-            "src": "build/**",
+            "src": "dist/**",
             "use": "@vercel/static"
         }
     ],
-    "rewrites": [
+    "routes": [
         {
-            "source": "/(.*)",
-            "destination": "index.js"
+            "src": "/(.*)",
+            "dist": "index.js"
         }
     ]
 }
