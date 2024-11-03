@@ -241,7 +241,7 @@ p>span {
   padding: 20px 5px;
 }
 .contentVercel{
-  overflowX:scroll;
+  overflow-x:scroll;
 }
 .BlogtopVercel{
   display: flex;
