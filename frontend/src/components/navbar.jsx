@@ -21,7 +21,7 @@ function Navbar() {
                 <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start" >
                     <NavLink to="/" className="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
                         {/* <svg className="bi me-2" width="40" height="32" role="img" ></svg> */}
-                        <TipsAndUpdatesIcon style={{color:"white"}} className='m-2'/>
+                        <TipsAndUpdatesIcon  className='m-2 text-white'/>
                         <p style={{marginTop:"1rem",borderRight:"2px solid white"}}><em>Community.</em><span>Dev</span></p>
                     </NavLink>
 
@@ -37,9 +37,9 @@ function Navbar() {
                     <form className="col-12 align-items-center justify-content-center col-lg-auto mb-3 mb-lg-0 me-lg-3 section" role="search">
                         {/* <input type="search" className="form-control" placeholder="Search..." aria-label="Search" /> */}
                         
-                        <NavLink to="/user/profile" className="d-block d-flex link-body-emphasis text-decoration-none" style={{gap:"4px",marginTop:"1rem"}} data-bs-toggle="dropdown" aria-expanded="false">
-                        {userImage?(<img src={userImage} alt="profile" width="32" height="32" className="rounded-circle " />):(<AccountCircleIcon style={{color:"white"}}/>)}
-                        {username?(<p style={{color:"white"}}>{username}</p>):(<p style={{color:"white"}}>Guest</p>)}
+                        <NavLink to="/user/profile" className="d-block d-flex link-body-emphasis text-decoration-none text-decoration-noneVercel" data-bs-toggle="dropdown" aria-expanded="false">
+                        {userImage?(<img src={userImage} alt="profile" width="32" height="32" className="rounded-circle " />):(<AccountCircleIcon className='text-white'/>)}
+                        {username?(<p className='text-white'>{username}</p>):(<p className='text-white'>Guest</p>)}
                         </NavLink>
 
                         {/* //it is for button */}

@@ -64,7 +64,7 @@ export default function AllBlogs() {
                             <option value="Environment">Environment</option>
                         </select>
                     </div>
-                    <div className="mb-6 m-3" style={{ maxWidth: "1000px" }}>
+                    <div className="mb-6 m-3 allBlogscurrentPost" >
                         {currentPosts
                             .filter((b) => category === '' || b.category === category)
                             .map((blog) =>
@@ -79,7 +79,7 @@ export default function AllBlogs() {
                             )}
                     </div>
                     {/* pagination */}
-                    <div style={{display: "flex",justifyContent: "flex-end"}}>
+                    <div className="forPagination" >
                     <nav aria-label="Page navigation example">
                         <ul className="pagination">
                             <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>

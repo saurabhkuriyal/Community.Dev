@@ -55,7 +55,7 @@ export default function UserOverview() {
                 <div className='col-sm-6 g-3'>
                     <div className="card bg-dark text-white dashboardCard">
                         <img className="card-img img-fluid w-100" src="/growth.jpeg" alt="Card image" />
-                        <div className="card-img-overlay" style={{overflow: "hidden"}}>
+                        <div className="card-img-overlay card-img-overlayStyle ">
                             <h5 className="card-title" style={{ color: "black" }}>Hello</h5>
                             <p className="card-text">use above button to react different controls of dasboard</p>
                         </div>

@@ -55,7 +55,7 @@ export default function UserDashboard() {
     return (<div>
         {loading?(<CircularLoading/>):
     (
-        <div className="container text-bg-dark" style={{overflowX:"scroll"}}>
+        <div className="container UserDashboardVercel text-bg-dark" >
                 <TableForUser  post={post}
                 forDelete={handleDelete}
                 />

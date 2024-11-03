@@ -202,7 +202,7 @@ export const Blog = () => {
             {loading?(<CircularLoading/>):
             (
             <div style={fixStyle}>
-                <div className="Blog mx-5 px-3" key={post._id} style={{ width: "50rem" }}>
+                <div className="Blog BlogVercelStyling mx-5 px-3" key={post._id}>
                     <h1>{post.title}</h1>
                     <hr />
                     <em className="author m-1">By {post.author}</em>

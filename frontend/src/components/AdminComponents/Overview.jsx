@@ -53,9 +53,9 @@ export default function Overview() {
 
                 <div className='col-sm-6 g-3'>
                     <div className="card bg-dark text-white dashboardCard">
-                        <img className="card-img" src="/growth.jpeg" style={{ height: "50%" }} alt="Card image" />
-                        <div className="card-img-overlay" style={{ overflow: "hidden" }}>
-                            <h5 className="card-title" style={{ color: "black" }}>Hello</h5>
+                        <img className="card-img card-imgVercel" src="/growth.jpeg" alt="Card image" />
+                        <div className="card-img-overlay card-img-overlayVercel " >
+                            <h5 className="card-title text-dark" >Hello</h5>
                             <p className="card-text" >This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
                     </div>

@@ -56,11 +56,11 @@ function Home() {
 
                         <div className="col blog p-3">
                             <div className="">
-                            <img className="bd-placeholder-img card-img-top" style={{borderRadius:"5%"}} width="100%" height="400" src="/collage.jpeg" role="img"  preserveAspectRatio="xMidYMid slice" focusable="false"/>
+                            <img className="bd-placeholder-img card-img-top" width="100%" height="400" src="/collage.jpeg" role="img"  preserveAspectRatio="xMidYMid slice" focusable="false"/>
                                 <div className="card-body">
                                     <h3>Click on this to see more</h3>
                                     <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. A, ex
-                                        voluptates aliquam, excepturi vel dssu perspiciatis!...<span style={{color:"blue"}} >Read more</span></p>
+                                        voluptates aliquam, excepturi vel dssu perspiciatis!...<span className="text-primary" >Read more</span></p>
                                     <div className="d-flex justify-content-between align-items-center">
                                         {/* <div className="btn-group">
                                         <button type="button" className="btn btn-sm btn-outline-secondary">View</button>

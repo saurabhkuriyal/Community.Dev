@@ -10,13 +10,13 @@ export default function IndividualBlog(props) {
     <div>
       <div className="row m-0 g-3" key={props.post._id}>
                     <div className="col-md-4">
-                        <img src={props.post.postImage} className="img-fluid " style={{height:"45vh"}} width="450" alt="..."/>
+                        <img src={props.post.postImage} className="img-fluid img-fluidVercel " width="450" alt="..."/>
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
                             <h5 className="card-title">{props.post.title}</h5>
                             {content}
-                            <p><FavoriteBorderIcon style={{color:"red"}}/>{props.post.likes}</p>
+                            <p><FavoriteBorderIcon className='text-danger'/>{props.post.likes}</p>
                             <em className='card-text'>by {props.post.author}</em>
                             <p className="card-text"><small className="text-body-secondary">{props.post.date}</small></p>
                         </div>

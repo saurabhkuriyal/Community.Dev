@@ -1,118 +1,123 @@
-
-
-.form{
+.form {
   padding: 20px;
 }
 
-.section{
+.section {
   display: flex;
   gap: .3rem;
 }
 
-.form-login{
-    padding: 5rem;
-    border-radius: 10% ;
-    /* box-shadow: 10px 10px; */
+.form-login {
+  padding: 5rem;
+  border-radius: 10%;
+  /* box-shadow: 10px 10px; */
 }
 
-.navbar{
+.navbar {
   margin: 2rem;
   padding: 1rem;
   /* backdrop-filter: blur(5px); */
 }
 
-.border-bottom{
-  
+.border-bottom {
+
   /* background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172); */
   background: linear-gradient(300deg, #0f0c29, #302b63, #24243e);
 }
 
-.container1>h2{
+.container1>h2 {
   color: rgb(30, 168, 232);
   font-weight: 900;
   font-size: 3rem;
 }
 
-.blog-button{
+.blog-button {
   padding: 0;
-  border:none;
+  border: none;
   background: none;
   filter: blur(1px);
 }
 
-.blog-button>Link{
+.blog-button>Link {
   color: inherit;
 }
 
-.blog-button :hover{
+.blog-button :hover {
   padding: 2px;
-  transition-duration:100ms ;
+  transition-duration: 100ms;
 }
-.blog>img{
+
+.blog>img {
   height: 20rem;
   width: 60%;
 }
 
-.nav-bar{
+.nav-bar {
   background: linear-gradient(300deg, #0f0c29, #302b63, #24243e);
-  color:white
+  color: white
 }
 
-.cards :hover{
+.cards :hover {
   /* padding:2px;
   transition-duration:100ms ; */
-  transform: scale(1.01);  /* Slightly increases the card size */
+  transform: scale(1.01);
+  /* Slightly increases the card size */
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-li{ 
-  list-style-type: none; 
+li {
+  list-style-type: none;
 }
 
-.linking{
-  color:inherit;
+.linking {
+  color: inherit;
   text-decoration: none;
 }
 
-.linking :hover{
+.linking :hover {
   /* padding:2px;
   transition-duration:100ms ease; */
-  
-    transform: scale(1.01);  /* Slightly increases the card size */
-    transition: transform 0.3s, box-shadow 0.3s;
+
+  transform: scale(1.01);
+  /* Slightly increases the card size */
+  transition: transform 0.3s, box-shadow 0.3s;
 
 }
+
 .card-body {
-  transition: none; /* Prevents inner elements from inheriting the scale */
+  transition: none;
+  /* Prevents inner elements from inheriting the scale */
 }
 
 /* .heroButton :hover{
   hover effct fro start reading button
 } */
 
-.conatanier1{
+.conatanier1 {
   width: 100%;
 }
 
-.signup{
+.signup {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.dashboardCard :hover{
-  transform: scale(1.01);  /* Slightly increases the card size */
+.dashboardCard :hover {
+  transform: scale(1.01);
+  /* Slightly increases the card size */
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-p>em{
- 
+p>em {
+
   font-size: larger;
-  color:white;
+  color: white;
   font-weight: 300;
 
 }
-p>span{
+
+p>span {
   font-size: large;
   color: white;
   font-weight: 600;
@@ -121,18 +126,22 @@ p>span{
 
 .like {
   color: grey;
-  transition: transform 0.3s ease-in-out 0.1s, color 0.3s ease-in-out 0.1s; /* Added a 0.1s delay */
+  transition: transform 0.3s ease-in-out 0.1s, color 0.3s ease-in-out 0.1s;
+  /* Added a 0.1s delay */
 }
-.like:hover{
+
+.like:hover {
   color: rgb(255, 136, 0);
   transform: scale(1.1);
 }
 
 .others {
   color: rgb(5, 0, 0);
-  transition: transform 0.3s ease-in-out 0.1s, color 0.3s ease-in-out 0.1s; /* Added a 0.1s delay */
+  transition: transform 0.3s ease-in-out 0.1s, color 0.3s ease-in-out 0.1s;
+  /* Added a 0.1s delay */
 }
-.others:hover{
+
+.others:hover {
   color: rgb(0, 174, 255);
   transform: scale(1.1);
 }
@@ -145,8 +154,10 @@ p>span{
 }
 
 .loader {
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid #3498db;
+  /* Blue */
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -158,12 +169,66 @@ p>span{
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 
-.footter{
+.footter {
   background: linear-gradient(300deg, #0f0c29, #302b63, #24243e);
-  color:white
+  color: white
+}
+
+.bd-placeholder-img {
+  border-radius: 5%;
+}
+
+.allBlogscurrentPost {
+  max-width: 1000px;
+}
+
+.forPagination {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.BlogVercelStyling {
+  width: 50rem;
+}
+
+.UserDashboardVercel {
+  overflow-x: scroll;
+}
+
+.card-img-overlayStyle {
+  overflow: hidden;
+}
+
+.overflow-hiddenVercel {
+  max-height: 30vh;
+}
+
+.img-fluidVercel {
+  height: 45vh;
+}
+
+.text-decoration-noneVercel {
+  gap: 4px;
+  margin-top: 1rem;
+}
+
+.card-imgVercel {
+  height: 50%;
+}
+
+.card-img-overlayVercel {
+  overflow: hidden;
+}
+
+.itemsVercel {
+  display: flex;
+  flex-direction: column;
+  align-items: "center";
+  gap: 10px;
 }

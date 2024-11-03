@@ -35,7 +35,7 @@ function Sidebar() {
             <CDBSidebarHeader prefix={<i className="fa fa-bars" />}>Contrast</CDBSidebarHeader>
             <CDBSidebarContent>
                 <CDBSidebarMenu>
-                    <div className="items" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "10px" }}>
+                    <div className="items itemsVercel">
                         <Link to={'/admin/dashboard/post'}><DynamicFeedIcon />User Posts</Link>
                         <Link to={'/admin/dashboard/users'}><PeopleAltIcon />Users Info</Link>
                         <Link to={'/admin/dashboard/newsletter'}><FeedIcon />Newsletters</Link>

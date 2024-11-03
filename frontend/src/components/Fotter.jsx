@@ -57,9 +57,9 @@ export const Fotter = () => {
                     <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
                         <p>© 2024 Company, Inc. All rights reserved.</p>
                         <ul className="list-unstyled d-flex">
-                            <li className="ms-3"><Link to={'https://github.com/saurabhkuriyal'} style={{color:"white"}}><GitHubIcon/></Link></li>
-                            <li className="ms-3"><Link to={"https://www.linkedin.com/in/saurabh-kuriyal-075a95238"} style={{color:"white"}}><LinkedInIcon/></Link></li>
-                            <li className="ms-3"><Link to={"https://twitter.com/Kuriyal7?t=BaAIukQLMir2naywwN2VcQ&s=09"} style={{color:"white"}}><XIcon/></Link></li>
+                            <li className="ms-3"><Link to={'https://github.com/saurabhkuriyal'} className='text-white'><GitHubIcon/></Link></li>
+                            <li className="ms-3"><Link to={"https://www.linkedin.com/in/saurabh-kuriyal-075a95238"} className='text-white'><LinkedInIcon/></Link></li>
+                            <li className="ms-3"><Link to={"https://twitter.com/Kuriyal7?t=BaAIukQLMir2naywwN2VcQ&s=09"} className='text-white'><XIcon/></Link></li>
                         </ul>
                     </div>
                 </footer>
