@@ -267,3 +267,7 @@ p>span {
 .flex-shrinkVercel{
   width: 280px;
 }
+.navbarVercelStyle{
+  margin-top:1rem;
+  border-right:2px solid white;
+}

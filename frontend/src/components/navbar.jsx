@@ -22,7 +22,7 @@ function Navbar() {
                     <NavLink to="/" className="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
                         {/* <svg className="bi me-2" width="40" height="32" role="img" ></svg> */}
                         <TipsAndUpdatesIcon  className='m-2 text-white'/>
-                        <p ={{marginTop:"1rem",borderRight:"2px solid white"}}><em>Community.</em><span>Dev</span></p>
+                        <p className='navbarVercelStyle'><em>Community.</em><span>Dev</span></p>
                     </NavLink>
 
                     <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
