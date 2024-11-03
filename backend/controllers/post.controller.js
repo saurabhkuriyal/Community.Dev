@@ -31,10 +31,10 @@ async function writeBlogs(req, res) {
 
         //console.log(post);
 
-        res.status(201).json("post created succesfully");
+        res.status(201).json({msg:"post created succesfully"});
     } catch (error) {
         //console.log(error);
-        res.status(500).json(error);
+        res.status(500).json({msg:"Some error occurred",error});
 
     }
 }

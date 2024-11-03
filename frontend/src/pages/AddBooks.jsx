@@ -73,7 +73,7 @@ function AddBooks() {
                     'Content-Type': 'multipart/form-data'
                 }
             });
-            if (response.status === 200) {
+            if (response.data.msg === "post created succesfully") {
 
                 navigate('/')
             } else {
@@ -82,6 +82,8 @@ function AddBooks() {
 
         } catch (error) {
             //console.log(error);
+            //console.log(error.response.data.msg);
+            
 
         }finally {
             setLoading(false);

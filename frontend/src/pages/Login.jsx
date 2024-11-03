@@ -57,7 +57,6 @@ export const Login = () => {
             dispatch(userlogin(currToken));
             
             dispatch(setUser({userId:response.data.userId, name:response.data.name,userType:response.data.userType,userImageURL:response.data.userImage}))
-            alert("welcome")
             navigate("/")
         } catch (error) {
             //console.log("Error data :", error);
