@@ -56,13 +56,13 @@ export default function UserOverview() {
                     <div className="card bg-dark text-white dashboardCard">
                         <img className="card-img img-fluid w-100" src="/growth.jpeg" alt="Card image" />
                         <div className="card-img-overlay card-img-overlayStyle ">
-                            <h5 className="card-title" style={{ color: "black" }}>Hello</h5>
+                            <h5 className="card-title text-dark" >Hello</h5>
                             <p className="card-text">use above button to react different controls of dasboard</p>
                         </div>
                     </div>
                     
                     <div className="button m-1">
-                    <button type="button" onClick={handlelogout} className="btn btn-primary btn-lg btn-block w-100">Click here to Logout <LogoutIcon style={{marginLeft:"1rem"}}/></button>
+                    <button type="button" onClick={handlelogout} className="btn btn-primary btn-lg btn-block w-100">Click here to Logout <LogoutIcon className='m-2'/></button>
                     </div>
 
                 </div>

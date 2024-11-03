@@ -11,7 +11,7 @@ export default function AdminLayout() {
             </div>
 
             {/* content */}
-            <div className='content w-60' style={{overflowX:"scroll"}}>
+            <div className='content w-60 contentVercel' >
             <Outlet/>
             </div>
         </div>

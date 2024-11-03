@@ -61,7 +61,7 @@ export default function Overview() {
                     </div>
 
                     <div className="button m-1">
-                        <button type="button" onClick={handleClick} className="btn btn-primary btn-lg btn-block w-100">Click here to Logout <LogoutIcon style={{ marginLeft: "1rem" }} /></button>
+                        <button type="button" onClick={handleClick} className="btn btn-primary btn-lg btn-block w-100">Click here to Logout <LogoutIcon className='m-2' /></button>
                     </div>
 
                 </div>

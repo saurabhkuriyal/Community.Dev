@@ -11,7 +11,7 @@ export const BlogCard = (props) => {
     return <>
         <div className="col cards p-4">
             <div className="">
-                <img className="bd-placeholder-img card-img-top" style={{borderRadius:"5%"}} width="100%" height="400" src={props.image} role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"/>
+                <img className="bd-placeholder-img card-img-top"  width="100%" height="400" src={props.image} role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"/>
                 <div className="card-body" key={props.id}>
                     <h3>{props.title}</h3>
                 {content}<p><Link to={`/specificblog/${props.id}`} >Read more</Link></p>

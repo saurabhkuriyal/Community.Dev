@@ -72,16 +72,10 @@ export const Login = () => {
     //     navigate("/signup")
     // }
 
-    const fixStyle={
-        display:"flex",
-        justifyContent:"center",
-        alignItems:"center"
-    }
-
     return  (<div>
         {loading?(<CircularLoading/>):(
         <div className="container">
-        <div className="form-login m-0 p-1" style={fixStyle}>
+        <div className="form-login m-0 p-1 form-loginVercel" >
                 <form onSubmit={send} >
                     <h1>Please sign in</h1>
                     <div className="box">

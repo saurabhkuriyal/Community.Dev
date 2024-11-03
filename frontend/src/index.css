@@ -232,3 +232,35 @@ p>span {
   align-items: "center";
   gap: 10px;
 }
+
+.CDBVercel{
+  text-align: center;
+}
+
+.sidebar-btn-wrapperVercel{
+  padding: 20px 5px;
+}
+.contentVercel{
+  overflowX:scroll;
+}
+.BlogtopVercel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.operationsVercel{
+  display: flex;
+  justify-content: space-between; 
+}
+.img-fluidVercelStyle{
+  width: 50rem;
+  height: 100vh;
+}
+.form-loginVercel{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.signUpVercelStyle{
+  width:30rem;
+}

@@ -108,7 +108,7 @@ export const Signup = () => {
         (
         <div className="container">
             <div className="form p-0 signup" >
-                <form action="" onSubmit={send} style={{width:"30rem"}} className="row g-3">
+                <form action="" onSubmit={send}  className="row g-3 signUpVercelStyle">
                     <div className="box">
                         <label htmlFor="validationDefault01" className="form-label">Name</label>
                         <input type="text" className="form-control" id="validationDefault01" onChange={handleChange} name="name" required />

@@ -123,11 +123,6 @@ export const Blog = () => {
 
     }
 
-    const fixStyle = {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center"
-    }
 
     //comments
 
@@ -188,34 +183,32 @@ export const Blog = () => {
         fetchComments();
     }, [id])
 
-    let likeness = {
-        color: "grey"
-    }
+    
+    document.getElementsbyId("like").style.color="grey";
+    
 
     if (checklike == true) {
-        likeness = {
-            color: "red"
-        }
+        document.getElementsbyId("like").style.color="red";
     }
 
         return (<div>
             {loading?(<CircularLoading/>):
             (
-            <div style={fixStyle}>
+            <div className='BlogtopVercel'>
                 <div className="Blog BlogVercelStyling mx-5 px-3" key={post._id}>
                     <h1>{post.title}</h1>
                     <hr />
                     <em className="author m-1">By {post.author}</em>
                     <p className="datem-1">{post.date}</p>
                     <hr />
-                    <div className="operations" style={{ display: "flex", justifyContent: "space-between" }}>
-                        <div className="like" >< FavoriteBorderIcon style={likeness} onClick={handleLike} id="like" />{count}</div>
+                    <div className="operations operationsVercel" >
+                        <div className="like" >< FavoriteBorderIcon onClick={handleLike} id="like" />{count}</div>
 
                         <div className="others"><BookmarksIcon onClick={() => handlebookmark(post._id)} id="bookmark" /></div>
 
                     </div>
                     <hr />
-                    <img src={post.postImage} className="img-fluid " style={{ width: "50rem", height: "100vh" }} alt="postimage" /><br/><br />
+                    <img src={post.postImage} className="img-fluid img-fluidVercelStyle " alt="postimage" /><br/><br />
                     {parse(String(post.content))}<br/><br />
                     <hr />
                     <br />

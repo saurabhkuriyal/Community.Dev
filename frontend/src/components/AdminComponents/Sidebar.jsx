@@ -50,10 +50,9 @@ function Sidebar() {
                 </CDBSidebarMenu>
             </CDBSidebarContent>
 
-            <CDBSidebarFooter style={{ textAlign: 'center' }}>
+            <CDBSidebarFooter className='CDBVercel' >
                 <div
-                    className="sidebar-btn-wrapper"
-                    style={{ padding: '20px 5px' }}
+                    className="sidebar-btn-wrapper sidebar-btn-wrapperVercel "
                 >
                     <p onClick={handleClick}><LogoutIcon /> Logout</p>
                 </div>
