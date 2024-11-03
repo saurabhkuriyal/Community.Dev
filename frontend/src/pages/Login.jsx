@@ -42,7 +42,7 @@ export const Login = () => {
         setLoading(true);
         event.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/login', login);
+            const response = await axios.post('/login', login);
 
             const currToken = response.data.token;
             //console.log("This is image",response.data.userImage);

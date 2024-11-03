@@ -37,7 +37,7 @@ export const Blog = () => {
         const fetchBlog = async () => {
             setLoading(true);
             try {
-                const response = await axios.get(`http://localhost:3000/getPost/${id}`);
+                const response = await axios.get(`/getPost/${id}`);
                 setPost(response.data.post);
                 setCount(response.data.post.likes);
 
@@ -67,7 +67,7 @@ export const Blog = () => {
     //for handling like
     async function handleLike() {
         try {
-            const response = await axios.post(`http://localhost:3000/likedPost/${id}`, { userid })
+            const response = await axios.post(`/likedPost/${id}`, { userid })
 
 
             if (response.data.msg === "Liked") {
@@ -96,7 +96,7 @@ export const Blog = () => {
 
         try {
 
-            const response = await axios.post(`http://localhost:3000/add/bookmarks`,
+            const response = await axios.post(`/add/bookmarks`,
                 {
                     userId: userid,
                     postId: id
@@ -146,14 +146,14 @@ export const Blog = () => {
     async function postingComments(e) {
         e.preventDefault();
         try {
-            const response = await axios.post(`http://localhost:3000/post/postcomments`, comments);
+            const response = await axios.post(`/post/postcomments`, comments);
 
             const adddeComment = response.data.commented;
            // console.log("This is ",response.data.commented);
             
            
 
-            const response2 = await axios.get(`http://localhost:3000/get/getcomments/${id}`);
+            const response2 = await axios.get(`/get/getcomments/${id}`);
             setShowComments(response2.data.getcomments);
 
 
@@ -173,7 +173,7 @@ export const Blog = () => {
         const fetchComments = async () => {
 
             try {
-                const response = await axios.get(`http://localhost:3000/get/getcomments/${id}`);
+                const response = await axios.get(`/get/getcomments/${id}`);
                 setShowComments(response.data.getcomments);
 
 

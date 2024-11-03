@@ -15,7 +15,7 @@ export default function HandlePost() {
         const fetchdata = async () => {
             setLoading(true);
             try {
-                const response = await axios.get(`http://localhost:3000/getallPost`);
+                const response = await axios.get(`/getallPost`);
                 setPost(response.data);
             } catch (error) {
                 //console.log(error);
@@ -31,7 +31,7 @@ export default function HandlePost() {
         console.log("hello");
         
         try {
-            const response=await axios.delete(`http://localhost:3000/delete/post/${id}`)
+            const response=await axios.delete(`/delete/post/${id}`)
             //console.log("This is post response",response);
             
             setPost((prevPost)=>prevPost.filter((item)=>item._id !== id))

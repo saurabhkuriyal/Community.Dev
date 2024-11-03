@@ -68,7 +68,7 @@ function AddBooks() {
         try {
 
 
-            const response = await axios.post(`http://localhost:3000/postBlog`, formData, {
+            const response = await axios.post(`/postBlog`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

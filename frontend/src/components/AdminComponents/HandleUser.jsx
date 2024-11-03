@@ -13,7 +13,7 @@ export default function HandleUser() {
     const fetchdata = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(`http://localhost:3000/getalluser`);
+        const response = await axios.get(`/getalluser`);
         //console.log(response);
 
         setUsers(response.data.user);

@@ -74,7 +74,7 @@ export const Signup = () => {
 
         if (initial.password === Password) {
             try {
-                const response = await axios.post('http://localhost:3000/submit', formData,{
+                const response = await axios.post('/submit', formData,{
                     headers: {
                         'Content-Type': 'multipart/form-data'
                     }

@@ -24,7 +24,7 @@ export default function AllBlogs() {
         const fetchdata = async () => {
             setLoading(true);
             try {
-                const response = await axios.get(`http://localhost:3000/getallPost`);
+                const response = await axios.get(`/getallPost`);
                 setBlogs(response.data);
             } catch (error) {
                 // console.log(error);

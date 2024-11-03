@@ -17,7 +17,7 @@ export const About = () => {
             setLoading(true);
             try {
 
-                const response = await axios.get(`http://localhost:3000/getallPost`,
+                const response = await axios.get(`/getallPost`,
 
                 );
 

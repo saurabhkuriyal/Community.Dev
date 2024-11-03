@@ -17,7 +17,7 @@ function Home() {
     useEffect(() => {
         
         // Fetch blogs from the backend
-        axios.get('http://localhost:3000/getallPost')
+        axios.get('/getallPost')
             .then((response) => {
                 setBlogs(response.data.slice(0,5));
                 // setLoading(false);

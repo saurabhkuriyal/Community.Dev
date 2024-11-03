@@ -15,7 +15,7 @@ export default function Bookmarks(props) {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const response = await axios.get(`http://localhost:3000/get/bookmarks/${id}`)
+                const response = await axios.get(`/get/bookmarks/${id}`)
 
                // console.log("This is response", response.data.bookmarks[0].postIds);
 
@@ -42,7 +42,7 @@ export default function Bookmarks(props) {
     async function handleDelete(postid) {
         try {
             console.log(postid, "here", id);
-            const response = await axios.delete(`http://localhost:3000/delete/bookmark`, {
+            const response = await axios.delete(`/delete/bookmark`, {
                 params: {
                     postId: postid,
                     userId: id

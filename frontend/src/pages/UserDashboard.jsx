@@ -17,7 +17,7 @@ export default function UserDashboard() {
         const fetchdata = async () => {
             setLoading(true);
             try {
-                const response = await axios.get(`http://localhost:3000/get/userpost`,
+                const response = await axios.get(`/get/userpost`,
                         {
                 headers:{
                     'x-access-token':token,
@@ -39,7 +39,7 @@ export default function UserDashboard() {
         console.log("hello");
         
         try {
-            const response=await axios.delete(`http://localhost:3000/delete/post/${id}`)
+            const response=await axios.delete(`/delete/post/${id}`)
             setPost((prevPost)=>prevPost.filter((item)=>item._id !== id))
             
         } catch (error) {

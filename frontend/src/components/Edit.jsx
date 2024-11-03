@@ -24,7 +24,7 @@ export default function Edit() {
         const fetchBlog = async () => {
             setLoading(true);
             try {
-                const response = await axios.get(`http://localhost:3000/getPost/${id}`);
+                const response = await axios.get(`/getPost/${id}`);
                 post=response.data;
                 setPost(response.data.post);
                 //console.log("Post from get speacific post",post);
@@ -108,7 +108,7 @@ export default function Edit() {
         try {
 
 
-            const response = await axios.patch(`http://localhost:3000/edit/post/${id}`, formData, {
+            const response = await axios.patch(`/edit/post/${id}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
