@@ -11,7 +11,7 @@ export const Blog = () => {
 
     const userid = useSelector((state) => state.user.userId);
     const name = useSelector((state) => state.user.name);
-    const userImage=useSelector((state)=> state.user.userImageURL)
+    const userImage = useSelector((state) => state.user.userImageURL)
 
 
     const [loading, setLoading] = useState(false);
@@ -55,7 +55,7 @@ export const Blog = () => {
             } catch (error) {
                 //console.log(error);
 
-            }finally {
+            } finally {
                 setLoading(false);
             }
 
@@ -104,7 +104,7 @@ export const Blog = () => {
             )
 
             //console.log("This is response",response);
-            
+
 
             if (response.data.msg === "bokmarked successfully") {
                 document.getElementById("bookmark").style.color = "blue";
@@ -115,8 +115,8 @@ export const Blog = () => {
 
 
         } catch (error) {
-           // console.log(error);
-           // console.log(error.response.data);
+            // console.log(error);
+            // console.log(error.response.data);
 
 
         }
@@ -144,9 +144,9 @@ export const Blog = () => {
             const response = await axios.post(`/post/postcomments`, comments);
 
             const adddeComment = response.data.commented;
-           // console.log("This is ",response.data.commented);
-            
-           
+            // console.log("This is ",response.data.commented);
+
+
 
             const response2 = await axios.get(`/get/getcomments/${id}`);
             setShowComments(response2.data.getcomments);
@@ -155,7 +155,7 @@ export const Blog = () => {
 
         } catch (error) {
             //console.log(error);
-           // console.log("error message", error.response.data.msg);
+            // console.log("error message", error.response.data.msg);
 
 
 
@@ -183,67 +183,64 @@ export const Blog = () => {
         fetchComments();
     }, [id])
 
-    
-    document.getElementsbyId("like").style.color="grey";
-    
 
-    if (checklike == true) {
-        document.getElementsbyId("like").style.color="red";
-    }
 
-        return (<div>
-            {loading?(<CircularLoading/>):
+    return (<div>
+        {loading ? (<CircularLoading />) :
             (
-            <div className='BlogtopVercel'>
-                <div className="Blog BlogVercelStyling mx-5 px-3" key={post._id}>
-                    <h1>{post.title}</h1>
-                    <hr />
-                    <em className="author m-1">By {post.author}</em>
-                    <p className="datem-1">{post.date}</p>
-                    <hr />
-                    <div className="operations operationsVercel" >
-                        <div className="like" >< FavoriteBorderIcon onClick={handleLike} id="like" />{count}</div>
+                <div className='BlogtopVercel'>
+                    <div className="Blog BlogVercelStyling mx-5 px-3" key={post._id}>
+                        <h1>{post.title}</h1>
+                        <hr />
+                        <em className="author m-1">By {post.author}</em>
+                        <p className="datem-1">{post.date}</p>
+                        <hr />
+                        <div className="operations operationsVercel" >
+                            <div className="like" ><FavoriteBorderIcon
+                                onClick={handleLike}
+                                id="like"
+                                className={`like-icon ${checklike ? 'like-icon--red' : ''}`}
+                            />{count}</div>
 
-                        <div className="others"><BookmarksIcon onClick={() => handlebookmark(post._id)} id="bookmark" /></div>
+                            <div className="others"><BookmarksIcon onClick={() => handlebookmark(post._id)} id="bookmark" /></div>
+
+                        </div>
+                        <hr />
+                        <img src={post.postImage} className="img-fluid img-fluidVercelStyle " alt="postimage" /><br /><br />
+                        {parse(String(post.content))}<br /><br />
+                        <hr />
+                        <br />
+
+
+                        <h4>Comments</h4><br />
+
+                        {showComments.map((comment) => (
+                            <ul key={comment._id}>
+                                <li><h5>
+
+                                    {comment.userId.userImage ? (<img src={comment.userId.userImage} alt="profile" width="32" height="32" className="rounded-circle" />) : (<AccountCircleIcon />)}
+
+                                    {comment.name}</h5></li>
+                                <li className='mx-2'>{comment.postComment} </li>
+                            </ul>
+                        ))}
+
+
+
+                        <form onSubmit={postingComments} >
+                            <div className="box">
+                                <label htmlFor="validationDefault02" className="form-label">Comment</label>
+                                <textarea type="text" className="form-control" id="validationDefault02" onChange={handleComment} name="comment" required></textarea>
+                            </div>
+                            <div className="col-12">
+                                <br /><button className="btn btn-primary" type="submit">Submit </button>
+                            </div>
+                        </form>
+
+                        <hr />
 
                     </div>
-                    <hr />
-                    <img src={post.postImage} className="img-fluid img-fluidVercelStyle " alt="postimage" /><br/><br />
-                    {parse(String(post.content))}<br/><br />
-                    <hr />
-                    <br />
-
-
-                    <h4>Comments</h4><br />
-
-                    {showComments.map((comment) => (
-                        <ul key={comment._id}>
-                            <li><h5>
-
-                                {comment.userId.userImage ? (<img src={comment.userId.userImage} alt="profile" width="32" height="32" className="rounded-circle" />) : (<AccountCircleIcon />)}
-
-                                {comment.name}</h5></li>
-                            <li className='mx-2'>{comment.postComment} </li>
-                        </ul>
-                    ))}
-
-
-
-                    <form onSubmit={postingComments} >
-                        <div className="box">
-                            <label htmlFor="validationDefault02" className="form-label">Comment</label>
-                            <textarea type="text" className="form-control" id="validationDefault02" onChange={handleComment} name="comment" required></textarea>
-                        </div>
-                        <div className="col-12">
-                            <br /><button className="btn btn-primary" type="submit">Submit form</button>
-                        </div>
-                    </form>
-
-                    <hr />
-
                 </div>
-            </div>
-        )}
-        </div>)
-    }
-    
+            )}
+    </div>)
+}

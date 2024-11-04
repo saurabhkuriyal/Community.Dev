@@ -271,3 +271,11 @@ p>span {
   margin-top:1rem;
   border-right:2px solid white;
 }
+
+.like-icon {
+  color: grey;
+}
+
+.like-icon--red {
+  color: red;
+}
